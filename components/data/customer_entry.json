@@ -1,0 +1,24 @@
+{
+    "_syntax": {
+        "email (key)": {
+            "Contact": "Contact details",
+            "Name": "Name of the customer",
+            "Rent Details": {
+                "registration_id": {
+                    "Rental Date": "date: %Y-%b-%d-%H:%M:%S",
+                    "Type": "Type of vehicle"
+                }
+            }
+        }
+    },
+    "rahul@gmail.com": {
+        "Contact": "7xxxxxxx97",
+        "Name": "Rahul Mittal",
+        "Rent Details": {
+            "boat_id_1": {
+                "Rental Date": "14-Dec-2021-12:16:18",
+                "Type": "boat"
+            }
+        }
+    }
+}

@@ -1,0 +1,144 @@
+openapi: "3.0.2"
+info:
+  title: Rental Solutions
+  version: "1.0"
+servers:
+  - url: https://localhost/api/v1
+
+components:
+  schemas:
+    Customer:
+      type: object
+      properties:
+        name:
+          type: string
+        contact:
+          type: string
+        email:
+          type: string
+      required:
+        - name
+        - contact
+        - email
+
+    Customers:
+      type: array
+      items:
+        $ref: "#/components/schemas/Customer"
+
+paths:
+  /:
+    get:
+      description: Get the list of vehicles and the respective information
+      responses:
+        "200":
+          description: OK
+
+  /rent:
+    put:
+      description: Rent a vehicle
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                vehicle:
+                  type: string
+              required:
+                - email
+                - vehicle
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  vehicle_registration_id: 
+                    type: string
+
+  /rent/{email}:
+    get:
+      description: History of rent requests for the given customer
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  history: 
+                    type: object
+
+  /rent/return:
+    put:
+      description: Return a rented vehicle
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                vehicle:
+                  type: string
+                vehicle_id:
+                  type: string
+              required:
+                - email
+                - vehicle
+                - vehicle_id
+      responses:
+        "200":
+          description: OK
+
+  /customers:
+    get:
+      description: List registered customers names
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Customers"
+
+  /customer/register:
+    post:
+      description: Register new customer
+      requestBody:
+        required: true
+        content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Customer"
+      responses:
+        "200":
+          description: OK
+
+  /customer/{email}:
+    get:
+      description: Get detail of specific customer
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Customer"
+
+  /customer/unregister/{email}:
+    delete:
+      description: Unregister a customer
+      responses:
+        "200":
+          description: OK
+

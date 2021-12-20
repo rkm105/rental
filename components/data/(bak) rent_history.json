@@ -1,0 +1,14 @@
+{
+    "_syntax": {
+        "email": {
+            "Rental History": [
+                {
+                    "Vehicle Type": "tyep of vehicle",
+                    "Registration ID": "vehicle id",
+                    "Rent Date": "date: %Y-%b-%d-%H:%M:%S",
+                    "Return Date": "date: %Y-%b-%d-%H:%M:%S"
+                }
+            ]
+        }
+    }
+}
