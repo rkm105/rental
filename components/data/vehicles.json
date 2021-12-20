@@ -1,43 +1,43 @@
 {
     "_syntax": {
-        "Vehicle Name": {
+        "Vehicle Name":{
             "Available": "Number of Available vehicle of this type",
+            "Rented": "Number of vehicle Rented of this type",
             "Registration_ids": {
                 "id": "availablity"
-            },
-            "Rented": "Number of vehicle Rented of this type"
+            }
         }
     },
-    "bike": {
+    "bike":{
         "Available": 2,
+        "Rented": 0,
         "Registration_ids": {
             "bike_id_1": true,
             "bike_id_2": true
-        },
-        "Rented": 0
+        }
     },
-    "boat": {
-        "Available": 1,
-        "Registration_ids": {
-            "boat_id_1": false,
-            "boat_id_2": true
-        },
-        "Rented": 1
-    },
-    "car": {
-        "Available": 0,
-        "Registration_ids": {
-            "car_id_1": false
-        },
-        "Rented": 1
-    },
-    "cycle": {
+    "cycle":{
         "Available": 3,
+        "Rented": 0,
         "Registration_ids": {
             "cycle_id_1": true,
             "cycle_id_2": true,
             "cycle_id_3": true
-        },
-        "Rented": 0
+        }
+    },
+    "car":{
+        "Available": 1,
+        "Rented": 0,
+        "Registration_ids": {
+            "car_id_1": true
+        }
+    },
+    "boat":{
+        "Available": 2,
+        "Rented": 0,
+        "Registration_ids": {
+            "boat_id_1": true,
+            "boat_id_2": true
+        }
     }
 }

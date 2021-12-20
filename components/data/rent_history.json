@@ -3,34 +3,12 @@
         "email": {
             "Rental History": [
                 {
+                    "Vehicle Type": "tyep of vehicle",
                     "Registration ID": "vehicle id",
                     "Rent Date": "date: %Y-%b-%d-%H:%M:%S",
-                    "Return Date": "date: %Y-%b-%d-%H:%M:%S",
-                    "Vehicle Type": "tyep of vehicle"
+                    "Return Date": "date: %Y-%b-%d-%H:%M:%S"
                 }
             ]
         }
-    },
-    "rahul@gmail.com": {
-        "Rental History": [
-            {
-                "Registration ID": "car_id_1",
-                "Rent Date": "13-Dec-2021-23:17:28",
-                "Return Date": "13-Dec-2021-23:55:37",
-                "Vehicle Type": "car"
-            },
-            {
-                "Registration ID": "boat_id_1",
-                "Rent Date": "13-Dec-2021-23:56:14",
-                "Return Date": "13-Dec-2021-23:56:37",
-                "Vehicle Type": "boat"
-            },
-            {
-                "Registration ID": "bike_id_1",
-                "Rent Date": "13-Dec-2021-23:56:10",
-                "Return Date": "13-Dec-2021-23:58:29",
-                "Vehicle Type": "bike"
-            }
-        ]
     }
 }
